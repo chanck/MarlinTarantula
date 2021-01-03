@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO Tarantula (EasyConfig)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO Tarantula"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -36,7 +36,7 @@
  */
 //#define LARGE_BED
 #define SDSUPPORT
-//#define CHANGE_Y_DIRECTION        // If your bed homes in the wrong direction (it should move front to back) enable this.
+#define CHANGE_Y_DIRECTION        // If your bed homes in the wrong direction (it should move front to back) enable this.
 //#define CHANGE_X_DIRECTION        // If your X carriage homes in the wrong direction (it should move right to left) enable this.
 //#define CHANGE_Z_DIRECTION        // If your Z homes in the wrong direction (it should move top to bottom) enable this.
 //#define HOTEND_E3DV6              // Genuine E3D v6 hotend.
@@ -55,8 +55,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          0
-#define NOZZLE_Y          0
+#define NOZZLE_X          -2
+#define NOZZLE_Y          -3
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -82,7 +82,7 @@
  */
 //#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
 //#define SN04          // Green sensor
-//#define INDUCTIVE_NO  // Normally open inductive sensor
+#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
 //#define SERVO_PROBE   // Endstop switch on rotating arm. Set servo angles!
 //#define NOZZLE_PROBE	// Nozzle wired up to contact metal on bed
@@ -93,9 +93,9 @@
  */
 //#define TRIPOINT
 //#define LINEAR
-//#define BILINEAR
+#define BILINEAR
 //#define UBL
-#define MANUAL
+//#define MANUAL
 
 /**
  * Z-Probe offset from nozzle (https://github.com/JimBrown/MarlinTarantula/wiki/How-to-determine-your-Z-Probe-offset)
@@ -103,8 +103,8 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       0
-#define SENSOR_FRONT       0
+#define SENSOR_RIGHT       22
+#define SENSOR_FRONT       5
 #define SENSOR_BEHIND      0
 
 /**
