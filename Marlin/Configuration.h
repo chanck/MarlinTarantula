@@ -105,8 +105,8 @@
 #define SENSOR_LEFT        0
 // #define SENSOR_RIGHT       22       // This is for stock setup with SN04
 // #define SENSOR_FRONT       5        // This is for stock setup with SN04
-#define SENSOR_RIGHT       39       // This is for radial fan fang setup with SN04
-#define SENSOR_FRONT       8        // This is for radial fan fang setup with SN04
+#define SENSOR_RIGHT       49       // This is for radial fan fang setup with SN04
+#define SENSOR_FRONT       9        // This is for radial fan fang setup with SN04
 
 #define SENSOR_BEHIND      0
 
