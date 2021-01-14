@@ -81,8 +81,8 @@
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
 //#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
-//#define SN04          // Green sensor
-#define INDUCTIVE_NO  // Normally open inductive sensor
+#define SN04          // Green sensor
+//#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
 //#define SERVO_PROBE   // Endstop switch on rotating arm. Set servo angles!
 //#define NOZZLE_PROBE	// Nozzle wired up to contact metal on bed
@@ -103,8 +103,11 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       22
-#define SENSOR_FRONT       5
+// #define SENSOR_RIGHT       22       // This is for stock setup with SN04
+// #define SENSOR_FRONT       5        // This is for stock setup with SN04
+#define SENSOR_RIGHT       39       // This is for radial fan fang setup with SN04
+#define SENSOR_FRONT       8        // This is for radial fan fang setup with SN04
+
 #define SENSOR_BEHIND      0
 
 /**
