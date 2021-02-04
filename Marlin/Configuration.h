@@ -55,8 +55,10 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          -2
-#define NOZZLE_Y          -3
+//#define NOZZLE_X          -2
+//#define NOZZLE_Y          -3
+#define NOZZLE_X          0            
+#define NOZZLE_Y          0            
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -80,8 +82,8 @@
  * Z-Probe type (must be none or one of them)
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
-//#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
-#define SN04          // Green sensor
+#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
+//#define SN04          // Green sensor
 //#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
 //#define SERVO_PROBE   // Endstop switch on rotating arm. Set servo angles!
@@ -102,14 +104,24 @@
  * Use only one of Left/Right and Front/Behind. Others must be 0 (zero)
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
+/** ===Start for stock setup with SN04====
 #define SENSOR_LEFT        0
-// #define SENSOR_RIGHT       22       // This is for stock setup with SN04
-// #define SENSOR_FRONT       5        // This is for stock setup with SN04
-#define SENSOR_RIGHT       49       // This is for radial fan fang setup with SN04
+#define SENSOR_RIGHT       22       
+#define SENSOR_FRONT       5
+#define SENSOR_BEHIND      0      
+===End for stock setup with SN04===**/
+/***====Start for radial fan fang setup with SN04===
+#define SENSOR_LEFT        0
+#define SENSOR_RIGHT       49       
 #define SENSOR_FRONT       9        // This is for radial fan fang setup with SN04
-
+#define SENSOR_BEHIND      0      
+====End for radial fan fang setup with SN04===***/
+/***Start for fan mount setup with 3d touch===***/
+#define SENSOR_LEFT        0 
+#define SENSOR_RIGHT       0  
+#define SENSOR_FRONT       37  
 #define SENSOR_BEHIND      0
-
+/***End for fan mount setup with 3d touch===***/
 /**
  * Number of grid points in each direction
  * Minimum 3. Maximum 15 for UBL. Maximum 7 for MANUAL
