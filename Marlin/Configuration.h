@@ -80,8 +80,8 @@
  * Z-Probe type (must be none or one of them)
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
-//#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
-#define SN04          // Green sensor
+#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
+//#define SN04          // Green sensor
 //#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
 //#define SERVO_PROBE   // Endstop switch on rotating arm. Set servo angles!
@@ -103,8 +103,8 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       22
-#define SENSOR_FRONT       5
+#define SENSOR_RIGHT       0
+#define SENSOR_FRONT       37
 #define SENSOR_BEHIND      0
 
 /**
@@ -154,20 +154,33 @@
 /**
  * TEVO Tarantula Custom PID Settings - Stock Hotend
  */
+ /* Use ckchan config instead
 #define  hot_Kp 9.84
 #define  hot_Ki 0.50
 #define  hot_Kd 48.17
+*/
 // FIND YOUR OWN: "M303 E0 C8 S200" to run autotune on the hotend at 200 degreesC for 8 cycles.
 // More info here: http://reprap.org/wiki/PID_Tuning
+/** ckchan Tevo Printer Hot End PID Setting **/
+#define  hot_Kp 25.33
+#define  hot_Ki 1.82
+#define  hot_Kd 88.20
+
 
 /**
  * TEVO Tarantula Custom PID Settings - Stock Heatbed
  */
+ /** Use ckchan config instead
 #define  bed_Kp 984.88
 #define  bed_Ki 193.91
 #define  bed_Kd 1250.55
+**/
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 // More info here: http://reprap.org/wiki/PID_Tuning
+/** ckchan Tevo Printer Bed PID Setting **/
+#define  bed_Kp 984.88
+#define  bed_Ki 193.91
+#define  bed_Kd 1250.55
 
 /**
  * If PID Autotune stops because the temp overshoots the requested S value, enable this and
@@ -188,7 +201,7 @@
  *       CUSTOM_USER_MENUS for PETG to appear, along with PLA and ABS, under Custom Commands.
  *       PLA and ABS will appear under both Custom Command and Prepare.
  */
-#define Hot_PLA     215
+#define Hot_PLA     220
 #define Bed_PLA      75
 
 #define Hot_ABS 		240
@@ -790,8 +803,8 @@
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
