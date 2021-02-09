@@ -178,9 +178,9 @@
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 // More info here: http://reprap.org/wiki/PID_Tuning
 /** ckchan Tevo Printer Bed PID Setting **/
-#define  bed_Kp 984.88
-#define  bed_Ki 193.91
-#define  bed_Kd 1250.55
+#define  bed_Kp 61.99
+#define  bed_Ki 8.60
+#define  bed_Kd 297.95
 
 /**
  * If PID Autotune stops because the temp overshoots the requested S value, enable this and
@@ -205,7 +205,7 @@
 #define Bed_PLA      75
 
 #define Hot_ABS 		240
-#define Bed_ABS 		100
+#define Bed_ABS 		110
 
 #define Hot_PETG 		230
 #define Bed_PETG     80
