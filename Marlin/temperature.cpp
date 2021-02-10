@@ -447,7 +447,7 @@ uint8_t Temperature::soft_pwm_amount[HOTENDS];
 
       // Timeout after MAX_CYCLE_TIME_PID_AUTOTUNE minutes since the last undershoot/overshoot cycle
       #ifndef MAX_CYCLE_TIME_PID_AUTOTUNE
-        #define MAX_CYCLE_TIME_PID_AUTOTUNE 20L
+        #define MAX_CYCLE_TIME_PID_AUTOTUNE 40L
       #endif
       if (((ms - t1) + (ms - t2)) > (MAX_CYCLE_TIME_PID_AUTOTUNE * 60L * 1000L)) {
         SERIAL_PROTOCOLLNPGM(MSG_PID_TIMEOUT);
